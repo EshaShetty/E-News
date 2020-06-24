@@ -10,9 +10,14 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class HeadlinesCollectionViewController: UICollectionViewController {
+class HeadlinesCollectionViewController: UICollectionViewController, CountryViewControllerDelegate {
+    
+
+    
 
     var itemSize: CGSize = CGSize(width: 0, height: 0)
+    
+    var country: String = "ca"
 
     var articles = [ArticleDetail] (){
         didSet{
@@ -26,7 +31,7 @@ class HeadlinesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         //loading data from the API
-        let articleRequest = NewsRequest()
+        let articleRequest = NewsRequest(country: country.self)
         articleRequest.getArticles{[weak self] result in
             
             switch result {
@@ -58,6 +63,21 @@ class HeadlinesCollectionViewController: UICollectionViewController {
         
         return itemSize
     }
+    
+    func countryViewControllerSelect(_ controller: CountryViewController, didFinishAdding countryCode: String) {
+        country.self = countryCode
+        //loading data from the API
+        let articleRequest = NewsRequest(country: country.self)
+        articleRequest.getArticles{[weak self] result in
+            
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let narticles):
+                self?.articles = narticles
+            }
+        }
+    }
 
 
     // MARK: UICollectionViewDataSource
@@ -81,5 +101,12 @@ class HeadlinesCollectionViewController: UICollectionViewController {
             c.source.text = articles[indexPath.row].source.name
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "Country"{
+            let controller = segue.destination as! CountryViewController
+            controller.delegate  = self
+        }
     }
 }
