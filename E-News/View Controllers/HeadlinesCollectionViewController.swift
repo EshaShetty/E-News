@@ -101,11 +101,16 @@ class HeadlinesCollectionViewController: UICollectionViewController, CountryView
         if let c = cell as? NewsCollectionViewCell{
             c.title.text = articles[indexPath.row].title
             c.source.text = articles[indexPath.row].source.name
-            
+            if let url = URL(string: articles[indexPath.row].urlToImage ?? ""){
+                do{
+                    let data = try Data(contentsOf: url)
+                    c.newsImg.image = UIImage(data: data)
+                }catch let err{
+                    print("Error: \(err.localizedDescription)")
+                }
+            }
             c.saveBtn.tag = indexPath.row
             c.saveBtn.addTarget(self, action: #selector(HeadlinesCollectionViewController.save(sender:)), for: .touchUpInside)
-//            c.saveBtn.tag = indexPath.row
-//            c.saveBtn.addTarget(self, action: #selector(HeadlinesCollectionViewController.save(sender:)), for: .touchUpInside)
         }
         return cell
     }
