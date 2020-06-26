@@ -12,9 +12,6 @@ private let reuseIdentifier = "Cell"
 
 class HeadlinesCollectionViewController: UICollectionViewController, CountryViewControllerDelegate {
     
-
-    
-
     var itemSize: CGSize = CGSize(width: 0, height: 0)
     
     var country: String = "ca"
@@ -78,6 +75,12 @@ class HeadlinesCollectionViewController: UICollectionViewController, CountryView
             }
         }
     }
+    
+    @objc func save(sender : UIButton) {
+        let alertController = UIAlertController(title: "Saved", message:"", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
+        self.present(alertController, animated: true)
+    }
 
 
     // MARK: UICollectionViewDataSource
@@ -96,9 +99,13 @@ class HeadlinesCollectionViewController: UICollectionViewController, CountryView
     
         // Configure the cell
         if let c = cell as? NewsCollectionViewCell{
-            
             c.title.text = articles[indexPath.row].title
             c.source.text = articles[indexPath.row].source.name
+            
+            c.saveBtn.tag = indexPath.row
+            c.saveBtn.addTarget(self, action: #selector(HeadlinesCollectionViewController.save(sender:)), for: .touchUpInside)
+//            c.saveBtn.tag = indexPath.row
+//            c.saveBtn.addTarget(self, action: #selector(HeadlinesCollectionViewController.save(sender:)), for: .touchUpInside)
         }
         return cell
     }

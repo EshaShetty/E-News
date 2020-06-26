@@ -8,12 +8,14 @@
 
 import UIKit
 
+
+
 class NewsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var newsImg: UIImageView!
-
     @IBOutlet weak var source: UILabel!
+    @IBOutlet weak var saveBtn: UIButton!
     
 }
+
