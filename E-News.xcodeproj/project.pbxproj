@@ -11,7 +11,6 @@
 		FC3C302424A5823C00EA4A4E /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3C302224A5823C00EA4A4E /* NewsTableViewCell.xib */; };
 		FC8A50F424883FF4008425F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A50F324883FF4008425F4 /* AppDelegate.swift */; };
 		FC8A50F624883FF4008425F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A50F524883FF4008425F4 /* SceneDelegate.swift */; };
-		FC8A50F824883FF4008425F4 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A50F724883FF4008425F4 /* NewsDetailViewController.swift */; };
 		FC8A50FB24883FF4008425F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8A50F924883FF4008425F4 /* Main.storyboard */; };
 		FC8A50FE24883FF4008425F4 /* E_News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC8A50FC24883FF4008425F4 /* E_News.xcdatamodeld */; };
 		FC8A510024883FFA008425F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8A50FF24883FFA008425F4 /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 		FC8A50F024883FF4008425F4 /* E-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8A50F324883FF4008425F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC8A50F524883FF4008425F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC8A50F724883FF4008425F4 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		FC8A50FA24883FF4008425F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC8A50FD24883FF4008425F4 /* E_News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = E_News.xcdatamodel; sourceTree = "<group>"; };
 		FC8A50FF24883FFA008425F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		FCA1C33424A2F9EF00796CB5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC8A50F724883FF4008425F4 /* NewsDetailViewController.swift */,
 				FCA1C33524A2FA1E00796CB5 /* HeadlinesCollectionViewController.swift */,
 				FCA1C33E24A316B100796CB5 /* CountryViewController.swift */,
 			);
@@ -193,7 +190,6 @@
 				FC8A50FE24883FF4008425F4 /* E_News.xcdatamodeld in Sources */,
 				FCA1C33B24A2FA7B00796CB5 /* NewsRequest.swift in Sources */,
 				FCA1C33D24A2FB4300796CB5 /* NewsCollectionViewCell.swift in Sources */,
-				FC8A50F824883FF4008425F4 /* NewsDetailViewController.swift in Sources */,
 				FCA1C33624A2FA1E00796CB5 /* HeadlinesCollectionViewController.swift in Sources */,
 				FC8A50F424883FF4008425F4 /* AppDelegate.swift in Sources */,
 				FC8A50F624883FF4008425F4 /* SceneDelegate.swift in Sources */,
