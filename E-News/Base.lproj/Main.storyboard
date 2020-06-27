@@ -103,9 +103,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="dCf-iN-Xj7" kind="show" identifier="showNews" id="leW-oq-6Tp"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRN-wc-b95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,35 +149,38 @@
             </objects>
             <point key="canvasLocation" x="2344.9275362318845" y="-425.22321428571428"/>
         </scene>
-        <!--News Detail View Controller-->
-        <scene sceneID="dNk-W7-Ova">
-            <objects>
-                <viewController storyboardIdentifier="newsDetails" id="dCf-iN-Xj7" customClass="NewsDetailViewController" customModule="E_News" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RHV-ow-Ayi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="hVs-49-v8h"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9EK-yf-NZ3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMC-9J-xTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1611.5942028985507" y="330.13392857142856"/>
-        </scene>
         <!--Saved News-->
         <scene sceneID="AOj-7Y-aHJ">
             <objects>
-                <viewController id="epq-Hk-N7C" sceneMemberID="viewController">
+                <viewController id="epq-Hk-N7C" customClass="SavedNewsViewController" customModule="E_News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4z-8J-mCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjD-Yr-1jr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="epq-Hk-N7C" id="w3d-hq-klw"/>
+                                    <outlet property="delegate" destination="epq-Hk-N7C" id="v64-T6-ay5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vjD-Yr-1jr" firstAttribute="top" secondItem="9Pd-L3-DBb" secondAttribute="top" id="D30-CN-66h"/>
+                            <constraint firstItem="vjD-Yr-1jr" firstAttribute="leading" secondItem="9Pd-L3-DBb" secondAttribute="leading" id="tSi-oG-grM"/>
+                            <constraint firstItem="9Pd-L3-DBb" firstAttribute="bottom" secondItem="vjD-Yr-1jr" secondAttribute="bottom" id="yeR-ZI-ftZ"/>
+                            <constraint firstItem="9Pd-L3-DBb" firstAttribute="trailing" secondItem="vjD-Yr-1jr" secondAttribute="trailing" id="ykZ-xp-VES"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Pd-L3-DBb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Saved News" image="square.and.arrow.down.fill" catalog="system" id="jTB-Rx-7pa">
                         <color key="badgeColor" red="0.74248542110000004" green="0.069467760619999999" blue="0.066550113260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="vjD-Yr-1jr" id="QC7-FT-KD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7S-6l-aRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import CoreData
 
 private let reuseIdentifier = "Cell"
 
@@ -80,9 +81,38 @@ class HeadlinesCollectionViewController: UICollectionViewController, CountryView
     }
     
     @objc func save(sender : UIButton) {
-        let alertController = UIAlertController(title: "Saved", message:"", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
-        self.present(alertController, animated: true)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+        }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            // 2
+            let entity = NSEntityDescription.entity(forEntityName: "Article",
+                                           in: managedContext)!
+            let article = NSManagedObject(entity: entity,insertInto: managedContext)
+            
+            if let url = URL(string: articles[sender.tag].urlToImage ?? ""){
+                do{
+                    let data = try Data(contentsOf: url)
+                    article.setValue(data, forKeyPath: "image")
+                }catch let err{
+                    print("Error: \(err.localizedDescription)")
+                }
+            }
+          
+            article.setValue(articles[sender.tag].title, forKeyPath: "title")
+            article.setValue(articles[sender.tag].url, forKeyPath: "url")
+            article.setValue(articles[sender.tag].source.name, forKeyPath: "source")
+       
+        do {
+            try managedContext.save()
+            let alertController = UIAlertController(title: "Saved", message:"", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
+            self.present(alertController, animated: true)
+            
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)") }
+        
     }
 
 
