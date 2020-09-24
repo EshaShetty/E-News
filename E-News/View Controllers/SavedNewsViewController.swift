@@ -73,7 +73,12 @@ extension SavedNewsViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell1.title.text = savedArticles[indexPath.row].value(forKeyPath: "title") as? String
         cell1.source.text = savedArticles[indexPath.row].value(forKeyPath: "source") as? String
-        cell1.img.image = UIImage(data: savedArticles[indexPath.row].value(forKeyPath: "image") as! Data)
+        
+        //checking if there is no image
+        if(savedArticles[indexPath.row].value(forKeyPath: "image") as? Data != nil)
+        {
+            cell1.img.image = UIImage(data: savedArticles[indexPath.row].value(forKeyPath: "image") as! Data)
+        }
         
         return cell1
     }
