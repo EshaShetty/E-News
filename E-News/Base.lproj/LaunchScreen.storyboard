@@ -15,9 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="E News Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gmH-GY-Yg9">
-                                <rect key="frame" x="33" y="282" width="350" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WWN News" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-1Z-wJs">
+                                <rect key="frame" x="33" y="259" width="361" height="379"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.74117647058823533" green="0.070588235294117646" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -30,6 +30,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E News Logo" width="500" height="493"/>
+        <image name="WWN News" width="300" height="300"/>
     </resources>
 </document>

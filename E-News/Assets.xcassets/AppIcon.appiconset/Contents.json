@@ -13,45 +13,43 @@
       "scale" : "3x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 12.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 10.png",
+      "size" : "29x29",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 3.png",
+      "filename" : "80x80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 4.png",
+      "filename" : "120x120.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 4-1.png",
+      "filename" : "120x120-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "E News Logo copy 16.png",
+      "filename" : "180x180.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 5.png",
+      "filename" : "20x20.png",
       "scale" : "1x"
     },
     {
@@ -63,13 +61,13 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 7.png",
+      "filename" : "29x29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 12-1.png",
+      "filename" : "58x58.png",
       "scale" : "2x"
     },
     {
@@ -81,31 +79,31 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 3-1.png",
+      "filename" : "80x80-1.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 8.png",
+      "filename" : "76x76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 13.png",
+      "filename" : "152x152.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "E News Logo copy 17.png",
+      "filename" : "167x167.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "E News Logo copy 18.png",
+      "filename" : "WWN copy.png",
       "scale" : "1x"
     }
   ],
