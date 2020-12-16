@@ -17,7 +17,7 @@ The design file can be found in the git files as "E-News.xd"
 The NewsAPI is used to fetch the latest news stories. The API applied here is a free API and has a limit of 500 Requests per day
 url: https://newsapi.org
 
-##Team Members
+## Team Members
 Esha Shetty - C0761033
 Aashish Bhardwaj - C0757405
 
