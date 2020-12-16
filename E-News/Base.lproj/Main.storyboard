@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1MO-JE-1oo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1MO-JE-1oo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -115,7 +117,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6rm-Li-HXk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" tag="10" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="66" id="VI3-G4-qtp">
                                 <rect key="frame" x="0.0" y="28" width="414" height="66"/>
@@ -159,21 +161,21 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjD-Yr-1jr">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="epq-Hk-N7C" id="w3d-hq-klw"/>
                                     <outlet property="delegate" destination="epq-Hk-N7C" id="v64-T6-ay5"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Pd-L3-DBb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vjD-Yr-1jr" firstAttribute="top" secondItem="9Pd-L3-DBb" secondAttribute="top" id="E1g-dg-BYB"/>
                             <constraint firstItem="vjD-Yr-1jr" firstAttribute="leading" secondItem="9Pd-L3-DBb" secondAttribute="leading" id="gIh-Zd-czf"/>
                             <constraint firstItem="vjD-Yr-1jr" firstAttribute="trailing" secondItem="9Pd-L3-DBb" secondAttribute="trailing" id="q4t-Y5-riv"/>
                             <constraint firstItem="vjD-Yr-1jr" firstAttribute="bottom" secondItem="9Pd-L3-DBb" secondAttribute="bottom" id="sef-3q-7nc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9Pd-L3-DBb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Saved News" largeTitleDisplayMode="always" id="hOB-In-tOt"/>
                     <connections>
@@ -221,19 +223,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rN7-w4-qNo">
                                         <rect key="frame" x="0.0" y="346" width="300" height="116"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-nf-rVF">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-K5-3dF">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="38"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <state key="normal" title="LOGIN">
-                                                    <color key="titleColor" red="0.87857377530000003" green="0.0050640250560000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="AYa-2n-qju" kind="showDetail" id="DjQ-nX-1HF"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-K5-3dF">
-                                                <rect key="frame" x="0.0" y="78" width="300" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="REGISTER">
@@ -243,17 +234,25 @@
                                                     <segue destination="ypZ-7m-jB5" kind="showDetail" id="cSp-Ru-M5A"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aro-Ka-kot">
+                                                <rect key="frame" x="0.0" y="78" width="300" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="LOGIN">
+                                                    <color key="titleColor" red="0.87857377530000003" green="0.0050640250560000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="4bd-e6-eQf"/>
                         <color key="backgroundColor" red="0.81608510020000002" green="0.0081452820450000005" blue="0.0076682926160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Cg4-1M-qB6" firstAttribute="centerY" secondItem="tno-fQ-T6b" secondAttribute="centerY" id="5m0-VF-KzB"/>
                             <constraint firstItem="Cg4-1M-qB6" firstAttribute="centerX" secondItem="tno-fQ-T6b" secondAttribute="centerX" id="QOL-5H-tUY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4bd-e6-eQf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyy-kU-BmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -292,7 +291,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-q4-EP7">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-q4-EP7">
                                                 <rect key="frame" x="0.0" y="248.5" width="300" height="51.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -305,12 +304,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vgg-Jg-HeD"/>
                         <color key="backgroundColor" red="0.89029103519999997" green="0.0052179079499999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a0G-pl-hL6" firstAttribute="centerY" secondItem="gRs-Gf-bpe" secondAttribute="centerY" id="9lk-SS-Dsb"/>
                             <constraint firstItem="a0G-pl-hL6" firstAttribute="centerX" secondItem="gRs-Gf-bpe" secondAttribute="centerX" id="qfg-du-0zg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vgg-Jg-HeD"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufz-yH-FEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,11 +321,11 @@
             <objects>
                 <viewController id="AYa-2n-qju" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ibW-u3-Dge">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="h47-6e-QNu">
-                                <rect key="frame" x="57" y="104" width="300" height="634"/>
+                                <rect key="frame" x="57" y="131" width="300" height="634"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWN News" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-mB-MU4">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -344,7 +343,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxV-Vt-PdW">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxV-Vt-PdW">
                                                 <rect key="frame" x="0.0" y="223.5" width="300" height="76.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -357,12 +356,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ETm-If-kpE"/>
                         <color key="backgroundColor" red="0.81608510020000002" green="0.0081452820450000005" blue="0.0076682926160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="h47-6e-QNu" firstAttribute="centerX" secondItem="ibW-u3-Dge" secondAttribute="centerX" id="OCy-WL-BZm"/>
                             <constraint firstItem="h47-6e-QNu" firstAttribute="centerY" secondItem="ibW-u3-Dge" secondAttribute="centerY" id="gI7-Ev-JuD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ETm-If-kpE"/>
                     </view>
                     <navigationItem key="navigationItem" id="a2i-4s-ZcN"/>
                 </viewController>
@@ -415,8 +414,11 @@
     </scenes>
     <resources>
         <image name="WWN News" width="300" height="300"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="rectangle.3.offgrid.fill" catalog="system" width="64" height="40"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="rectangle.3.offgrid.fill" catalog="system" width="128" height="81"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
