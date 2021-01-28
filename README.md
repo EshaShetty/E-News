@@ -18,13 +18,6 @@ The NewsAPI is used to fetch the latest news stories. The API applied here is a 
 url: https://newsapi.org
 
 
-After testing the midnight scenario it seems that the start and end times must be entered on the same day.
-Case 1: 
-<img width="1159" alt="Screen Shot 2021-01-27 at 3 38 08 PM" src="https://user-images.githubusercontent.com/77290438/106145694-da69c500-6143-11eb-99bf-906fa81c5ee2.png">
-
-Case 2: The app showed the live stream at 12am and ended at 1am
-<img width="1161" alt="Screen Shot 2021-01-27 at 3 41 46 PM" src="https://user-images.githubusercontent.com/77290438/106146119-4c420e80-6144-11eb-8b7b-4ef477a31a37.png">
-
 
 
 
